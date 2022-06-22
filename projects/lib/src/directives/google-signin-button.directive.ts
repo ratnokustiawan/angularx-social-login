@@ -13,8 +13,11 @@ export class GoogleSigninButtonDirective {
   ) {
     socialAuthService.initState.pipe(take(1)).subscribe(() => {
       google.accounts.id.renderButton(el.nativeElement, {
-        type: 'icon',
-        size: 'medium',
+        type: 'standard',
+        size: 'large',
+        text:'signin_with',
+        shape:'rectangular',
+        logo_alignment:'left'
       });
     })
   }
